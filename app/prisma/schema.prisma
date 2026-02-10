@@ -1,0 +1,61 @@
+// This is the structure of your data.
+// Recommended DB: PostgreSQL (Supabase or Neon)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 1. The Admin (You)
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String   // Hashed password
+  createdAt DateTime @default(now())
+}
+
+// 2. Your Projects (The Showcase)
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  tagline     String   // Short punchy description
+  description String   // Full detailed story
+  techStack   String[] // Array like ["Next.js", "Prisma", "AI"]
+  demoLink    String?
+  githubLink  String?
+  imageUrl    String
+  featured    Boolean  @default(false)
+  order       Int      @default(0) // To sort them manually
+}
+
+// 3. Tech Skills (The Bars/Orbs)
+model Skill {
+  id        String   @id @default(cuid())
+  name      String
+  category  String   // "Frontend", "Backend", "AI"
+  level     Int      // 1-100 for progress bars
+  icon      String?  // Icon name from Lucide
+}
+
+// 4. Analytics (Who visited?)
+model VisitorLog {
+  id        String   @id @default(cuid())
+  ipHash    String   // Anonymized IP for unique counts
+  userAgent String?
+  visitedAt DateTime @default(now())
+  section   String   // Which section they spent time on
+}
+
+// 5. Contact Messages
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  content   String
+  read      Boolean  @default(false)
+  sentAt    DateTime @default(now())
+}
