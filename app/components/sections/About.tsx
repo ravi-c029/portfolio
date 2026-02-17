@@ -62,7 +62,7 @@ export default function About() {
             </p>
             <p>
               I'm a Computer Science & Data Analytics undergraduate student at
-              IIT Patna (CPI: 9.56). Focused on AI, machine learning, and
+              IIT Patna (CPI: 9.53). Focused on AI, machine learning, and
               full-stack development. Building scalable, data-driven, and
               user-centric software solutions.{" "}
               <strong className="text-white"></strong>
