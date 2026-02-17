@@ -61,9 +61,10 @@ export default function About() {
               </strong>
             </p>
             <p>
-              I'm a Computer Science & Data Analytics undergraduate student at IIT Patna (CPI: 9.56). Focused
-              on AI, machine learning, and full-stack development. Building
-              scalable, data-driven, and user-centric software solutions.{" "}
+              I'm a Computer Science & Data Analytics undergraduate student at
+              IIT Patna (CPI: 9.56). Focused on AI, machine learning, and
+              full-stack development. Building scalable, data-driven, and
+              user-centric software solutions.{" "}
               <strong className="text-white"></strong>
             </p>
             <p>
@@ -142,7 +143,7 @@ export default function About() {
                 <div className="absolute inset-0 bg-cyan-500/20 blur-md rounded-full group-hover/image:blur-xl transition-all" />
                 <div className="relative h-full w-full overflow-hidden [clip-path:polygon(50%_0%,_100%_25%,_100%_75%,_50%_100%,_0%_75%,_0%_25%)] bg-slate-900/50 border-2 border-cyan-500/50">
                   <Image
-                    src="/profile-placeholder.jpg"
+                    src="/about.jpeg"
                     alt="Ravi Kumar"
                     fill
                     className="w-full"
@@ -153,7 +154,7 @@ export default function About() {
               </div>
 
               <div className="flex justify-between border-b border-dashed border-white/10 pb-4 text-xs sm:text-sm">
-                <span className="text-slate-400">CLASS</span>
+                <span className="text-slate-400">Class</span>
                 <span className="text-cyan-300">CS Student</span>
               </div>
 
@@ -164,18 +165,21 @@ export default function About() {
                 </span>
               </div>
 
-              <div className="space-y-3 text-xs sm:text-sm">
-                <span className="text-slate-400 block mb-2">
-                  PRIMARY DIRECTIVES
+              <div className="flex-1 flex flex-col gap-2 mb-16 overflow-hidden">
+                <span className="text-slate-400 block text-[10px] uppercase tracking-widest font-semibold mb-1">
+                  Primary Directives
                 </span>
-                <div className="flex items-center gap-2 text-green-400/90">
-                  <Terminal size={14} /> <span>Full Stack Engineering</span>
-                </div>
-                <div className="flex items-center gap-2 text-blue-400/90">
-                  <Database size={14} /> <span>Scalable Architecture</span>
-                </div>
-                <div className="flex items-center gap-2 text-pink-400/90">
-                  <Activity size={14} /> <span>Machine Learning & AI</span>
+
+                <div className="flex flex-col gap-1.5 text-xs sm:text-sm font-medium">
+                  <div className="flex items-center gap-2 text-green-400/90">
+                    <Terminal size={14} /> <span>Full Stack Engineering</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-blue-400/90">
+                    <Database size={14} /> <span>Scalable Architecture</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-pink-400/90">
+                    <Activity size={14} /> <span>Machine Learning & AI</span>
+                  </div>
                 </div>
               </div>
 
